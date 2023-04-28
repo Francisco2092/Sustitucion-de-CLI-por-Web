@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Slang Panameño</title>
+</head>
+<body>
+    <h1>Slang Panameño</h1>
+    <ul>
+        {% for palabra in palabras %}
+            <li>{{ palabra.palabra }} - {{ palabra.significado }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/" method="POST">
+        <label for="palabra">Palabra:</label>
+        <input type="text" id="palabra" name="palabra">
+        <br>
+        <label for="significado">Significado:</label>
+        <input type="text" id="significado" name="significado">
+        <br>
+        <button type="submit">Agregar palabra</button>
+    </form>
+</body>
+</html>
